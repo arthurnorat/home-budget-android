@@ -10,3 +10,16 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+# kotlinx.serialization: keep the generated serializers for our model classes
+# (recommended rules from kotlinx.serialization's own R8 guidance).
+-keepattributes *Annotation*, InnerClasses
+-dontnote kotlinx.serialization.AnnotationsKt
+
+-keep,includedescriptorclasses class com.example.homebudget.model.**$$serializer { *; }
+-keepclassmembers class com.example.homebudget.model.** {
+    *** Companion;
+}
+-keepclasseswithmembers class com.example.homebudget.model.** {
+    kotlinx.serialization.KSerializer serializer(...);
+}
