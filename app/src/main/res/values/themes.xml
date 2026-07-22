@@ -1,0 +1,4 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Casca mínima antes do Compose assumir via MaterialTheme em Theme.kt -->
+    <style name="Theme.HomeBudget" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>
