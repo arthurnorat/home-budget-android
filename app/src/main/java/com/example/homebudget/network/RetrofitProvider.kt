@@ -10,10 +10,10 @@ import java.util.concurrent.TimeUnit
 
 object RetrofitProvider {
 
-    private const val BASE_URL = "https://home-budget-api-wml2.onrender.com"
+    private const val BASE_URL = "https://home-budget-api-689350097433.southamerica-east1.run.app"
 
-    // O Render free tier "hiberna" a API após inatividade; a primeira chamada
-    // após um período ocioso ("cold start") pode levar dezenas de segundos.
+    // O Cloud Run desliga a instância após inatividade; a primeira chamada
+    // após um período ocioso ("cold start") leva cerca de 10 segundos.
     private const val CONNECT_TIMEOUT_SECONDS = 30L
     private const val READ_TIMEOUT_SECONDS = 60L
     private const val WRITE_TIMEOUT_SECONDS = 60L
